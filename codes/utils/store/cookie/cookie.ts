@@ -3,9 +3,11 @@ const keyUUID = 'uuid'
 
 // 开发环境直接用Domain，生产环境用线上地址
 let domain = document.domain
-if (process.env.NODE_ENV === 'production') {
-  domain = '.iovitz.com'
-}
+
+// As Needed
+// if (process.env.NODE_ENV === 'production') {
+//   domain = '.iovitz.com'
+// }
 
 class Cookier {
   /**
@@ -49,7 +51,7 @@ class Cookier {
   }
 
   /**
-   * 为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间
+   * 为了删除指定名称的cookie
    * @param name cookie的名
    */
   delCookie (key: string) {

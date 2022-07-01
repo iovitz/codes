@@ -1,3 +1,7 @@
+# CommitLint
+
+```js
+// commitlint.config.js
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
@@ -20,3 +24,5 @@ module.exports = {
     ],
   },
 }
+
+```
