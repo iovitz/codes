@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+  },
+  "include": ["codes/**/*.d.ts", "codes/**/*.ts", "codes/**/*.js"],
+	"exclude": ["node_modules", "dist", "__tests__"]
+}

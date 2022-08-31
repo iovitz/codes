@@ -1,8 +1,11 @@
+/**
+ * 操作本地LocalStorage
+ */
 class LocalStorage {
   /**
-   * 设置localStorage中的值
-   * @param key 预备存储到localStorage中的key
-   * @param val 预备存储到localStorage中的value
+   * 往LocalStorage中写入一个值
+   * @param {string} key
+   * @param {string} val
    */
   public set (key: string, val: any) {
     val = typeof val === 'string' ? val : JSON.stringify(val)
@@ -10,9 +13,9 @@ class LocalStorage {
   }
 
   /**
-   * 根据key获取value
-   * @param key 想要获取的item的key
-   * @returns key对应的value
+   * 往LocalStorage中获取一个值
+   * @param {string} key 需要获取的key
+   * @return {T} 获取到的值
    */
   public get<T = any> (key: string) {
     const val = localStorage.getItem(key)
@@ -27,20 +30,21 @@ class LocalStorage {
     }
   }
 
+
   /**
-   * 在localStorage中移除某个item
-   * @param key 想要删除的item的key
+   * 往LocalStorage中获取一个值
+   * @param {string} key 需要删除的key
    */
   delete (key: string) {
     localStorage.removeItem(key)
   }
 
   /**
-   * 判断localStorage中是否存在某个item
-   * @param key 想要查找的item对应的key
-   * @returns
+   * 判断LocalStorage中是否已经包含某个Key
+   * @param {string} key 需要删除的key
+   * @return {boolean}
    */
-  has (key: string) {
+  public has (key: string) {
     return this.get(key) !== null
   }
 

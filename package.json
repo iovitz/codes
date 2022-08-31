@@ -1,0 +1,59 @@
+{
+  "name": "codes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iovitz/codes.git"
+  },
+  "keywords": [],
+  "author": "iovitz",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iovitz/codes/issues"
+  },
+  "homepage": "https://github.com/iovitz/codes#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.1",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/node": "^18.7.13",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "commitizen": "^4.2.5",
+    "commitlint": "^17.1.1",
+    "concurrently": "^7.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "editorconfig": "^0.15.3",
+    "eslint": "^8.23.0",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^8.0.1",
+    "install": "^0.13.0",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.19",
+    "parcel-bundler": "^1.12.5",
+    "pnpm": "^7.9.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --cache --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

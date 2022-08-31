@@ -1,24 +1,23 @@
-// 浏览器唯一标识, 以下是cookie
-const keyUUID = 'uuid'
-
 // 开发环境直接用Domain，生产环境用线上地址
 let domain = document.domain
 
 // As Needed
-// if (process.env.NODE_ENV === 'production') {
-//   domain = '.iovitz.com'
-// }
+if (process.env.NODE_ENV === 'production') {
+  domain = 'xxx.com'
+}
 
-class Cookier {
+/**
+ * 进行Cookie相关操作
+ */
+class Koocie {
   /**
-   * 设置cookie的值
-   * @param cname cookie的名字
-   * @param cvalue cookie的值
-   * @param second 有效时间, 单位: 秒
-   * @param path 可选参数
-   * @param domain 可选参数
+   * 删除仓库
+   * @param {string} key key
+   * @param {string} value 123
+   * @param {number} second 123
+   * @param {string} path 123123
    */
-  setCookie (key: string, value: string, second: number, path: string) {
+  public setCookie (key: string, value: string, second: number, path: string) {
     // 找到html文件前的 / 索引
     const index = window.location.pathname.lastIndexOf('/')
     const currentIndex = window.location.pathname.slice(0, index)
@@ -34,11 +33,11 @@ class Cookier {
   }
 
   /**
-   * 获得cookie的值
-   * @param cname cookie的名字
-   * @returns {string}
+   * 从cookie中获取值
+   * @param {string} key 需要获取的key
+   * @return {string} 获取到的值
    */
-  getCookie (key: string) {
+  public getCookie (key: string) {
     // 以分号分割cookie并返回一个数组
     const res = document.cookie.split(';')
     for (let i = 0; i < res.length; i += 1) {
@@ -51,15 +50,14 @@ class Cookier {
   }
 
   /**
-   * 为了删除指定名称的cookie
-   * @param name cookie的名
+   * 删除cookie
+   * @param {string} key 需要删除cookie的key
    */
-  delCookie (key: string) {
+  public delCookie (key: string) {
     const date = new Date()
     date.setTime(date.getTime() - 86400000)
-    // eslint-disable-next-line no-param-reassign
     document.cookie = `${key}=; expires=${date.toUTCString()};domain=${domain};path=/`
   }
 }
 
-export default new Cookier()
+export default new Koocie()
