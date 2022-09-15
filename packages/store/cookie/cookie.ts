@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 /**
  * 进行Cookie相关操作
  */
-class Koocie {
+export class Cookie {
   /**
    * 删除仓库
    * @param {string} key key
@@ -59,5 +59,3 @@ class Koocie {
     document.cookie = `${key}=; expires=${date.toUTCString()};domain=${domain};path=/`
   }
 }
-
-export default new Koocie()

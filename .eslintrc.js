@@ -27,5 +27,6 @@ module.exports = {
     // 函数定义的时候函数名后加个空格
     'space-before-function-paren': ['error', 'always'],
     'no-unused-vars': 'off',
+    'require-jsdoc': 'off',
   },
 }
