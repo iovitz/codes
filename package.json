@@ -16,7 +16,7 @@
   "author": "iovitz",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "codes/*"
   ],
   "license": "ISC",
   "bugs": {
