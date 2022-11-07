@@ -1,0 +1,30 @@
+{
+  "name": "@iovitz/web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "一个基于 Webpack 构建的 React开发环境",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve -c build/webpack.dev.js",
+    "build": "yarn ts:checker && cross-env NODE_ENV=production webpack -c build/webpack.prod.js",
+    "ts:checker": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "iovitz",
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "defaults",
+      "not ie < 11",
+      "last 2 versions",
+      "> 1%",
+      "iOS 9",
+      "last 3 iOS versions"
+    ]
+  }
+}
