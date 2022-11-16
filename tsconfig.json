@@ -13,6 +13,6 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
   },
-  "include": ["codes/**/*.d.ts", "codes/**/*.ts", "codes/**/*.js"],
+  "include": ["code_set/**/*.d.ts", "code_set/**/*.ts", "code_set/**/*.js"],
 	"exclude": ["node_modules", "dist", "__tests__"]
 }
