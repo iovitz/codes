@@ -1,8 +1,9 @@
-class SingleTon {
-  private static instance: SingleTon
+class LazySingleTon {
+  private static instance: LazySingleTon
+
   public static getInstance () {
     if (!this.instance) {
-      this.instance = new SingleTon()
+      this.instance = new LazySingleTon()
     }
     return this.instance
   }

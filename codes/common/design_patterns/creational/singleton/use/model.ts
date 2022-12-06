@@ -1,8 +1,8 @@
 class Model {
   static instance = new Model
-  private constructor (public visible = false) {
 
-  }
+  private constructor (public visible = false) {}
+
   show () {
     this.visible = true
   }
