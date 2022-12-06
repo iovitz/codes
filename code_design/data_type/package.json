@@ -1,0 +1,24 @@
+{
+  "name": "@iovitz/data_type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iovitz/codes.git"
+  },
+  "private": true,
+  "workspaces": [
+    "codes/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/iovitz/codes/issues"
+  },
+  "homepage": "https://github.com/iovitz/codes#readme",
+  "keywords": ["data_type"],
+  "author": "iovitz",
+  "license": "ISC"
+}
