@@ -5,5 +5,8 @@ export function getCode (length: number) {
           // 10个数字+26个字母
           36,
       )
-      .substring(2, 2 + length)
+      .substring(
+          // 从第三位开始，第一位容易重复
+          3, 3 + length,
+      )
 }
