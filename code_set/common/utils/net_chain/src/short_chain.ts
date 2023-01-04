@@ -1,8 +1,8 @@
 import axios, {AxiosInstance, AxiosRequestConfig} from 'axios'
 
-export abstract class ShortChain {
-  axios: AxiosInstance
-  protected constructor (config: AxiosRequestConfig<any>) {
+export class ShortChain {
+  private axios: AxiosInstance
+  constructor (config: AxiosRequestConfig<any>) {
     this.axios = axios.create(config)
 
     this.axios.interceptors.response.use((res: any) => {
@@ -10,36 +10,71 @@ export abstract class ShortChain {
     })
   }
 
-  get<T> (url: string, params: Record<string, any> = {}) {
+  get<T> (url: string, params: Record<string, any> = {}, config: AxiosRequestConfig = {}) {
     return this.axios.get(url, {
       params: {},
     }) as Promise<T>
   }
 
-  post<T> (url: string, data: Record<string, any> = {}) {
-    return this.axios.post(url, {
-      ...data,
-    }) as Promise<T>
+  post<T> (url: string, data: Record<string, any> = {}, config: AxiosRequestConfig = {}) {
+    return this.axios.post(
+        url,
+        {
+          ...data,
+        },
+        config,
+    ) as Promise<T>
   }
 
-  patch<T> (url: string, data: Record<string, any> = {}) {
-    return this.axios.post(url, {
-      ...data,
-    }) as Promise<T>
+  put<T> (url: string, data: Record<string, any> = {}, config: AxiosRequestConfig = {}) {
+    return this.axios.put(
+        url,
+        {
+          ...data,
+        },
+        config,
+    ) as Promise<T>
   }
 
-  put<T> (url: string, data: Record<string, any> = {}) {
-    return this.axios.post(url, {
-      ...data,
-    }) as Promise<T>
+  patch<T> (url: string, data: Record<string, any> = {}, config: AxiosRequestConfig = {}) {
+    return this.axios.patch(
+        url,
+        {
+          ...data,
+        },
+        config,
+    ) as Promise<T>
   }
 
-  delete<T> (url: string, data: Record<string, any> = {}) {
-    return this.axios.post(url, {
-      ...data,
-    }) as Promise<T>
+  postForm<T> (url: string, data: Record<string, any> = {}, config: AxiosRequestConfig = {}) {
+    return this.axios.postForm(
+        url,
+        {
+          ...data,
+        },
+        config,
+    ) as Promise<T>
   }
 
+  putForm<T> (url: string, data: Record<string, any> = {}, config: AxiosRequestConfig = {}) {
+    return this.axios.putForm(
+        url,
+        {
+          ...data,
+        },
+        config,
+    ) as Promise<T>
+  }
+
+  patchForm<T> (url: string, data: Record<string, any> = {}, config: AxiosRequestConfig = {}) {
+    return this.axios.patchForm(
+        url,
+        {
+          ...data,
+        },
+        config,
+    ) as Promise<T>
+  }
 
   setHeader (key: string, value: string) {
     this.axios.defaults.headers.common[key] = value
