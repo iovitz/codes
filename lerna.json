@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "npmClient": "pnpm",
   "packages": [
-    "code_design/*",
-    "code_set/*",
-    "framework_source_code/*",
-    "learning/*"
+    "src/*"
   ]
 }

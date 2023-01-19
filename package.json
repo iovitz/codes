@@ -16,10 +16,7 @@
   "author": "iovitz",
   "private": true,
   "workspaces": [
-    "code_design/*",
-    "code_set/*",
-    "framework_source_code/*",
-    "learning/*"
+    "src/*"
   ],
   "license": "ISC",
   "bugs": {

@@ -13,6 +13,6 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
   },
-  "include": ["codes/**/*.d.ts", "codes/**/*.ts", "codes/**/*.js", "codes/react/src/index.js", "codes/react/src/index.js"],
+  "include": ["src/**/*.d.ts", "src/**/*.ts"],
 	"exclude": ["node_modules", "dist", "__tests__"]
 }
