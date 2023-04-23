@@ -1,4 +1,4 @@
-import axios, {AxiosInstance, AxiosRequestConfig} from 'axios'
+import axios, {type AxiosInstance, type AxiosRequestConfig} from 'axios'
 
 export class ShortChain {
   private axios: AxiosInstance
@@ -12,7 +12,8 @@ export class ShortChain {
 
   get<T> (url: string, params: Record<string, any> = {}, config: AxiosRequestConfig = {}) {
     return this.axios.get(url, {
-      params: {},
+      ...config,
+      params,
     }) as Promise<T>
   }
 
