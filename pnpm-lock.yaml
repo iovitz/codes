@@ -4,9 +4,15 @@ dependencies:
   '@reduxjs/toolkit':
     specifier: ^1.9.0
     version: 1.9.1(react-redux@8.0.5)(react@18.2.0)
+  '@types/bcryptjs':
+    specifier: ^2.4.2
+    version: registry.npmmirror.com/@types/bcryptjs@2.4.2
   axios:
     specifier: ^0.27.2
     version: 0.27.2
+  bcryptjs:
+    specifier: ^2.4.3
+    version: registry.npmmirror.com/bcryptjs@2.4.3
   cli-table3:
     specifier: ^0.6.3
     version: 0.6.3
@@ -8085,6 +8091,12 @@ packages:
     dev: true
     optional: true
 
+  registry.npmmirror.com/@types/bcryptjs@2.4.2:
+    resolution: {integrity: sha512-LiMQ6EOPob/4yUL66SZzu6Yh77cbzJFYll+ZfaPiPPFswtIlA/Fs1MzdKYA7JApHU49zQTbJGX3PDmCpIdDBRQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/bcryptjs/-/bcryptjs-2.4.2.tgz}
+    name: '@types/bcryptjs'
+    version: 2.4.2
+    dev: false
+
   registry.npmmirror.com/@types/jsonwebtoken@9.0.2:
     resolution: {integrity: sha512-drE6uz7QBKq1fYqqoFKTDRdFCPHd5TCub75BM+D+cMx7NU9hUz7SESLfC2fSCXVFMO5Yj8sOWHuGqPgjc+fz0Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/jsonwebtoken/-/jsonwebtoken-9.0.2.tgz}
     name: '@types/jsonwebtoken'
@@ -8098,6 +8110,12 @@ packages:
     name: '@types/node'
     version: 18.11.12
     dev: true
+
+  registry.npmmirror.com/bcryptjs@2.4.3:
+    resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/bcryptjs/-/bcryptjs-2.4.3.tgz}
+    name: bcryptjs
+    version: 2.4.3
+    dev: false
 
   registry.npmmirror.com/buffer-equal-constant-time@1.0.1:
     resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz}

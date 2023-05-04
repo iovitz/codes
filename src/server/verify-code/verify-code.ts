@@ -1,4 +1,4 @@
-import {createHmac} from 'crypto'
+import bcryptjs from 'bcryptjs'
 import {createHash} from 'crypto'
 import {sign, verify} from 'jsonwebtoken'
 
@@ -18,7 +18,7 @@ export function getRandomCode (length: number) {
 const SALT = 'SALT'
 const TOKEN_KEY = 'TOKEN_KEY'
 
-export function passwordWithSalt (password: string) {
+export function saltPassword (password: string) {
   const saltPassword = createHash('md5')
       .update(SALT + password)
       .digest('hex')
@@ -41,4 +41,14 @@ export function verifyToken (url: string, token?: string) {
   } catch (e) {
     throw new Error('Invalid Token')
   }
+}
+
+export function bcryptPassword (str: string) {
+  const result = bcryptjs.hashSync(str, 10)
+  console.log(result)
+}
+
+export function bcryptCompare (str: string, encodeStr: string) {
+  const result = bcryptjs.compareSync(str, encodeStr)
+  console.log(result)
 }
