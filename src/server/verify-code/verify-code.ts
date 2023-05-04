@@ -1,23 +1,44 @@
 import {createHmac} from 'crypto'
-export function getCode (length: number) {
+import {createHash} from 'crypto'
+import {sign, verify} from 'jsonwebtoken'
+
+export function getRandomCode (length: number) {
   return Math.random()
       .toString(
       // 10个数字+26个字母
           36,
       )
       .substring(
-      // 从第三位开始，第一位容易重复
           3,
           3 + length,
       )
 }
 
-export function cryptoPassword (password: string, salt = 'salt') {
-  const hash = createHmac('sha512', salt) /** 使用sha512算法进行hash*/
-  hash.update(password)
-  const value = hash.digest('hex')
-  return {
-    salt: salt,
-    passwordHash: value,
+
+const SALT = 'SALT'
+const TOKEN_KEY = 'TOKEN_KEY'
+
+export function passwordWithSalt (password: string) {
+  const saltPassword = createHash('md5')
+      .update(SALT + password)
+      .digest('hex')
+  return saltPassword
+}
+
+export function createToken<T extends {}> (data: T) {
+  const token = sign(data, TOKEN_KEY)
+  return token
+}
+
+// 解析jwt
+export function verifyToken (url: string, token?: string) {
+  if (!token) {
+    throw new Error('Token Miss')
+  }
+  try {
+    // 这里判断是否需要split
+    return verify(token.split(' ')[1], TOKEN_KEY)
+  } catch (e) {
+    throw new Error('Invalid Token')
   }
 }
