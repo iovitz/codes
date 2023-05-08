@@ -13,6 +13,6 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/server/verify-code/verify-code.ts"],
+  "include": ["src/**/*.d.ts", "src/**/*.ts"],
 	"exclude": ["node_modules", "dist", "__tests__"]
 }
