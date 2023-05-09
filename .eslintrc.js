@@ -30,5 +30,6 @@ module.exports = {
     'require-jsdoc': 'off',
     'valid-jsdoc': 'off',
     'no-dupe-class-members': 'off',
+    'guard-for-in': 'off',
   },
 }
