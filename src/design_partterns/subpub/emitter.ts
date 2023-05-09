@@ -1,4 +1,4 @@
 
-export class Emitter {
+class Emitter {
 
 }
