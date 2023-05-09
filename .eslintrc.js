@@ -28,6 +28,7 @@ module.exports = {
     'space-before-function-paren': ['error', 'always'],
     'no-unused-vars': 'off',
     'require-jsdoc': 'off',
+    'valid-jsdoc': 'off',
     'no-dupe-class-members': 'off',
   },
 }
