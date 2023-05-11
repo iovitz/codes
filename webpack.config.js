@@ -14,7 +14,7 @@ module.exports = {
 
   devServer: {
     historyApiFallback: true,
-    static: path.resolve(__dirname, './dist'),
+    static: path.resolve(__dirname, './static'),
     open: true,
     compress: true,
     hot: true,
