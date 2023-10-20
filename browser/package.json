@@ -1,5 +1,5 @@
 {
-  "name": "@iovitz.codes/browser",
+  "name": "@iovitz.codes/design_partterns",
   "version": "1.0.0",
   "description": "design partterns",
   "main": "index.js",
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.8.7",
     "concurrently": "^8.2.2",
     "html-webpack-plugin": "^5.5.3",
     "nodemon": "^3.0.1",
