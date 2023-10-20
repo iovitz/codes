@@ -1,0 +1,26 @@
+{
+  "name": "@iovitz.codes/vue3",
+  "version": "1.0.0",
+  "description": "design partterns",
+  "main": "index.js",
+  "scripts": {
+    "html": "./node_modules/.bin/webpack serve",
+    "dev": "npm run build && ./node_modules/.bin/concurrently \"npm run exec\" \"npm run build:watch\"",
+    "exec": "./node_modules/.bin/nodemon ./dist/main.js",
+    "build:watch": "./node_modules/.bin/webpack build --watch",
+    "build": "./node_modules/.bin/webpack build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "html-webpack-plugin": "^5.5.3",
+    "nodemon": "^3.0.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
