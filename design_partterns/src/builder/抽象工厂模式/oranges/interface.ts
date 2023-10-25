@@ -1,6 +1,6 @@
-import { AbstractApple } from '../apples/interface'
+import { Apple } from '../apples/interface'
 
-export interface AbstractOrange {
+export interface Orange {
   getName(): string
-  sayHiToApple(collaborator: AbstractApple): void
+  sayHiToApple(collaborator: Apple): void
 }

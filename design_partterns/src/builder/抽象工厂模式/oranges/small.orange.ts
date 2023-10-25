@@ -1,12 +1,12 @@
-import { AbstractApple } from '../apples/interface'
-import { AbstractOrange } from './interface'
+import { Apple } from '../apples/interface'
+import { Orange } from './interface'
 
-export class SmallOrange implements AbstractOrange {
+export class SmallOrange implements Orange {
   public getName(): string {
     return 'SmallOrange'
   }
 
-  public sayHiToApple(apple: AbstractApple): void {
+  public sayHiToApple(apple: Apple): void {
     const appleName = apple.getName()
     const myName = this.getName()
     console.log(`Hi, ${appleName}, this is ${myName}`)

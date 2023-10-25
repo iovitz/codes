@@ -1,7 +1,7 @@
-import { AbstractApple } from '../apples/interface'
-import { AbstractOrange } from '../oranges/interface'
+import { Apple } from '../apples/interface'
+import { Orange } from '../oranges/interface'
 
-export interface AbstractFruitFactory {
-  createApple(): AbstractApple
-  createOrange(): AbstractOrange
+export interface FruitFactory {
+  createApple(): Apple
+  createOrange(): Orange
 }

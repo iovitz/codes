@@ -1,15 +1,15 @@
 import { BigApple } from '../apples/big.apple'
-import { AbstractApple } from '../apples/interface'
+import { Apple } from '../apples/interface'
 import { BigOrange } from '../oranges/big.orange'
-import { AbstractOrange } from '../oranges/interface'
-import { AbstractFruitFactory } from './interface'
+import { Orange } from '../oranges/interface'
+import { FruitFactory } from './interface'
 
-export class BigFruitFactory implements AbstractFruitFactory {
-  public createApple(): AbstractApple {
+export class BigFruitFactory implements FruitFactory {
+  public createApple(): Apple {
     return new BigApple()
   }
 
-  public createOrange(): AbstractOrange {
+  public createOrange(): Orange {
     return new BigOrange()
   }
 }
