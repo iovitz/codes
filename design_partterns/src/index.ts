@@ -1,1 +1,1 @@
-import './builder/工厂模式/index'
+import './构建者模式/工厂模式/index'
