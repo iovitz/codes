@@ -18,7 +18,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -36,4 +36,5 @@ module.exports = {
       inject: true,
     }),
   ],
+  devtool: 'eval-source-map',
 }

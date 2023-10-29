@@ -14,6 +14,7 @@
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "experimentalDecorators": true,
+    "downlevelIteration": true,
     "baseUrl": "."
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts"],

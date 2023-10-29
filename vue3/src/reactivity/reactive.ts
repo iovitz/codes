@@ -1,12 +1,12 @@
-import {mutableHandlers} from './baseHandlers'
+import { mutableHandlers } from './baseHandlers'
 
 export const reactiveMap = new WeakMap()
 
-export function reactive (target: object) {
+export function reactive(target: object) {
   return createReactiveObject(target, mutableHandlers, reactiveMap)
 }
 
-function createReactiveObject (target: object, baseHandlers: ProxyHandler<any>, proxyMap: WeakMap<object, any>) {
+function createReactiveObject(target: object, baseHandlers: ProxyHandler<any>, proxyMap: WeakMap<object, any>) {
   const existingProxy = reactiveMap.get(target)
   if (existingProxy) {
     return existingProxy
@@ -16,4 +16,3 @@ function createReactiveObject (target: object, baseHandlers: ProxyHandler<any>, 
 
   return proxy
 }
-
