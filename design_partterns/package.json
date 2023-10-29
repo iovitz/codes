@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "html": "./node_modules/.bin/webpack serve",
-    "dev": "npm run build && ./node_modules/.bin/concurrently \"npm run exec\" \"npm run build:watch\"",
+    "dev": "npm run build && npm run dev:watch",
+    "dev:watch": "./node_modules/.bin/concurrently \"npm run exec\" \"npm run build:watch\"",
     "exec": "./node_modules/.bin/nodemon ./dist/main.js",
     "build:watch": "./node_modules/.bin/webpack build --watch",
     "build": "./node_modules/.bin/webpack build"

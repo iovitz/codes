@@ -1,1 +1,1 @@
-import './构建者模式/生成器模式/index'
+import './行为模式/适配器模式/index'
