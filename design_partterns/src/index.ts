@@ -1,1 +1,1 @@
-import './结构性模式/适配器模式/index'
+import './行为模式/职责链模式/index'
