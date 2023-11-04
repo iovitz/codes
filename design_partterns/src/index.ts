@@ -1,1 +1,1 @@
-import './行为模式/职责链模式/index'
+import './行为模式/命令模式/index'
