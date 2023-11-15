@@ -6,4 +6,4 @@ const trim = new TrimHandler()
 
 lowerCase.setNext(trim)
 
-console.log(lowerCase.handle('  HELLO WORLD  '))
+console.log(lowerCase.handle('  HELLO WORLD '))

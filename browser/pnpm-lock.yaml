@@ -11,6 +11,7 @@ specifiers:
   webpack: ^5.89.0
   webpack-cli: ^5.1.4
   webpack-dev-server: ^4.15.1
+  webpack-node-externals: ^3.0.0
 
 devDependencies:
   '@types/node': 20.8.7
@@ -23,6 +24,7 @@ devDependencies:
   webpack: 5.89.0_webpack-cli@5.1.4
   webpack-cli: 5.1.4_c82b1245f7cbfc96d08b1570310d48f4
   webpack-dev-server: 4.15.1_webpack-cli@5.1.4+webpack@5.89.0
+  webpack-node-externals: 3.0.0
 
 packages:
 
@@ -2506,6 +2508,11 @@ packages:
       clone-deep: 4.0.1
       flat: 5.0.2
       wildcard: 2.0.1
+    dev: true
+
+  /webpack-node-externals/3.0.0:
+    resolution: {integrity: sha512-LnL6Z3GGDPht/AigwRh2dvL9PQPFQ8skEpVrWZXLWBYmqcaojHNN0onvHzie6rq7EWKrrBfPYqNEzTJgiwEQDQ==}
+    engines: {node: '>=6'}
     dev: true
 
   /webpack-sources/3.2.3:
