@@ -30,7 +30,6 @@ module.exports = {
     ],
   },
   stats: 'errors-only',
-  externals: [nodeExternals()],
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',

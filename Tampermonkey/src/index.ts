@@ -1,1 +1,1 @@
-import './scripts/测试加载成功'
+import './scripts/获取请求信息'
