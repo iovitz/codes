@@ -4,18 +4,15 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        http://*/*
+// @connect      localhost
+// @match        https://bytedance.larkoffice.com/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-// @grant        none
+// @grant        GM_xmlhttpRequest
 // ==/UserScript==
 
-const requireScriptList = [
-  // require scripts
-]
+const requireScriptList = ['http://localhost:3131/main.js']
 
-loadRequireFiles().then(() => {
-  // Your Code Here
-})
+loadRequireFiles().then(() => {})
 
 function loadRequireFiles() {
   async function loadJsFile(url) {
