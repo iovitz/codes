@@ -1,24 +1,21 @@
 {
-  "name": "@iovitz.codes/node",
+  "name": "@iovitz.codes/template",
   "version": "1.0.0",
-  "description": "node codes",
+  "description": "design partterns",
   "main": "index.js",
   "scripts": {
-    "html": "cross-env SCINE=web ./node_modules/.bin/webpack serve",
+    "web": "cross-env SCINE=web ./node_modules/.bin/webpack serve",
     "dev": "npm run build && ./node_modules/.bin/concurrently \"npm run exec\" \"npm run build:watch\"",
     "exec": "./node_modules/.bin/nodemon ./dist/main.js",
     "build:watch": "./node_modules/.bin/webpack build --watch",
     "build": "./node_modules/.bin/webpack build"
   },
-  "author": "",
+  "author": "iovitz",
   "license": "ISC",
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/jsonwebtoken": "^9.0.6",
-    "@types/koa": "^2.15.0",
-    "@types/koa-router": "^7.4.8",
     "@types/node": "^20.8.7",
     "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
     "html-webpack-plugin": "^5.5.3",
     "nodemon": "^3.0.1",
     "reflect-metadata": "^0.1.13",
@@ -28,12 +25,5 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
     "webpack-node-externals": "^3.0.0"
-  },
-  "dependencies": {
-    "axios": "^1.6.8",
-    "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^9.0.2",
-    "koa": "^2.15.2",
-    "koa-router": "^12.0.1"
   }
 }

@@ -7,7 +7,7 @@ export const rootRouter = new KoaRouter({
   prefix: '/buuk',
 })
 
-function reqProcess (methodType: MethodType) {
+function reqProcess(methodType: MethodType) {
   return function (path: `/${string}`) {
     return function (targetPrototype: any, methodName: string, descriptor: PropertyDescriptor) {
       Reflect.defineMetadata('path', path, targetPrototype, methodName)
@@ -23,7 +23,7 @@ export const Controller = (module: `/${string}`) => {
       prefix: modulePath,
     })
     const prototype = targetClass.prototype
-    Reflect.ownKeys(prototype).forEach((key) => {
+    Reflect.ownKeys(prototype).forEach(key => {
       const fn = prototype[key]
       const path = Reflect.getMetadata('path', prototype, key)
       const methodType: MethodType = Reflect.getMetadata('methodType', prototype, key)
