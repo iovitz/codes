@@ -2,17 +2,19 @@
 // @name         测试脚本使用
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @description  hahaha
+// @author       iovitz
 // @connect      localhost
-// @match        https://bytedance.larkoffice.com/*
+// @match        *://*/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
 
 const requireScriptList = ['http://localhost:3131/main.js']
 
-loadRequireFiles().then(() => {})
+loadRequireFiles().then(() => {
+  // ...YourCode
+})
 
 function loadRequireFiles() {
   async function loadJsFile(url) {
