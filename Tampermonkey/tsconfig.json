@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "target": "ES5",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "node",
     "types": ["node", "reflect-metadata"],
     "strict": true,
+    "allowJs": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -14,8 +15,10 @@
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "outDir": "./dist",
     "baseUrl": "."
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts"],
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "types/*.d.ts"],
   "exclude": ["node_modules", "dist", "__tests__"]
 }

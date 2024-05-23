@@ -1,25 +1,18 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const nodeExternals = require('webpack-node-externals')
 
-module.exports = {
-  entry: './src/index.ts',
+const isWeb = process.env.SCINE === 'web'
+const isNode = !isWeb
+
+const webpackConfig = {
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    compress: true,
-    port: 3131,
-    hot: true,
-  },
   resolve: {
     extensions: ['.ts', '.js'],
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -29,12 +22,35 @@ module.exports = {
       },
     ],
   },
-  stats: 'errors-only',
-  plugins: [
+  externals: [],
+  plugins: [],
+}
+
+if (isWeb) {
+  const HtmlWebpackPlugin = require('html-webpack-plugin')
+  // 增加Web端devServer配置
+  webpackConfig.devServer = {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 3131,
+    hot: true,
+    client: {
+      overlay: false,
+    },
+  }
+  webpackConfig.plugins.push(
     new HtmlWebpackPlugin({
       template: 'public/index.html',
       filename: 'index.html',
       inject: true,
-    }),
-  ],
+    })
+  )
+} else if (isNode) {
+  const nodeExternals = require('webpack-node-externals')
+  webpackConfig.target = 'node'
+  webpackConfig.externals.push(nodeExternals())
 }
+
+module.exports = webpackConfig
