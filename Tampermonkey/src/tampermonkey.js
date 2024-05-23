@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         测试脚本使用
+// @name         调试脚本
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  hahaha

@@ -1,6 +1,5 @@
 class ScriptController {
   constructor() {
-    this.$ = window.jQuery
     this.loadTimes = 0
   }
 
@@ -57,7 +56,7 @@ class ScriptController {
   insertHTML() {
     $(':root').css({ fontSize: '12px' })
 
-    this.controlPanel = this.$(
+    this.controlPanel = $(
       `<div class="pico" style="z-index: 999999999; position: fixed; left: 0px; bottom: 0px;">
   <button class="secondary" id="load-button">停止加载</button>
 </article>
