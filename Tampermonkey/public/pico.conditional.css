@@ -7,6 +7,7 @@
  * Styles
  */
 .pico {
+  font-size: 12px;
   --pico-font-family-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --pico-font-family-sans-serif: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, 'Helvetica Neue', sans-serif,
     var(--pico-font-family-emoji);
