@@ -8,13 +8,31 @@
     <title>Hello world!</title>
   </head>
   <body>
-    <main class="">
+    <main class="pico">
+      <nav>
+        <ul>
+          <li><strong>Acme Corp</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+      </nav>
+      <progress value="66" max="100"></progress>
+
       <!-- Secondary -->
       <details>
         <summary role="button" class="secondary">Secondary</summary>
         <p>...</p>
       </details>
 
+      Tooltip About COMPONENTS Tooltip Enable tooltips everywhere, without JavaScript. Content Syntax Placement Tooltip on a link Tooltip on inline
+      element
+
+      <p>Tooltip on a <a href="#" data-tooltip="Tooltip">link</a></p>
+      <p>Tooltip on <em data-tooltip="Tooltip">inline element</em></p>
+      <p><button data-tooltip="Tooltip">Tooltip on a button</button></p>
       <!-- Contrast -->
       <details>
         <summary role="button" class="contrast">Contrast</summary>
@@ -41,9 +59,121 @@
       <section>
         <p>Unstyled hello world!</p>
       </section>
-      <section class="pico">
-        <p>Styled hello world!</p>
-      </section>
+      <p>Styled hello world!</p>
+      <nav>
+        <ul>
+          <li><strong>Acme Corp</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+      </nav>
+      <form>
+        <fieldset role="group">
+          <input name="email" type="email" placeholder="Enter your email" autocomplete="email" />
+          <input type="submit" value="Subscribe" />
+        </fieldset>
+      </form>
+      <button aria-busy="true" aria-label="Please wait…" />
+      <button aria-busy="true" aria-label="Please wait…" class="secondary" />
+      <button aria-busy="true" aria-label="Please wait…" class="contrast" />
+      <button aria-busy="true" class="outline">Please wait…</button>
+      <button aria-busy="true" class="outline secondary">Please wait…</button>
+      <button aria-busy="true" class="outline contrast">Please wait…</button>
+      <!-- Dropdown -->
+      <details class="dropdown">
+        <summary>Dropdown</summary>
+        <ul>
+          <li><a href="#">Solid</a></li>
+          <li><a href="#">Liquid</a></li>
+          <li><a href="#">Gas</a></li>
+          <li><a href="#">Plasma</a></li>
+        </ul>
+      </details>
+
+      <!-- Select -->
+      <select name="select" aria-label="Select" required>
+        <option selected disabled value="">Select</option>
+        <option>Solid</option>
+        <option>Liquid</option>
+        <option>Gas</option>
+        <option>Plasma</option>
+        false
+      </select>
+      <form>
+        <fieldset>
+          <label>
+            First name
+            <input name="first_name" placeholder="First name" autocomplete="given-name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="Email" autocomplete="email" />
+          </label>
+        </fieldset>
+
+        <input type="submit" value="Subscribe" />
+      </form>
+      <article>
+        <header>Header</header>
+        Body
+        <footer>Footer</footer>
+      </article>
+      <form>
+        <fieldset>
+          <legend>Language preferences:</legend>
+          <label>
+            <input type="checkbox" name="english" checked />
+            English
+          </label>
+          <label>
+            <input type="checkbox" name="french" checked />
+            French
+          </label>
+          <label>
+            <input type="checkbox" name="mandarin" />
+            Mandarin
+          </label>
+          <label>
+            <input type="checkbox" name="thai" />
+            Thai
+          </label>
+          <label aria-disabled="true">
+            <input type="checkbox" name="dothraki" disabled />
+            Dothraki
+          </label>
+        </fieldset>
+        <!-- Input inside label -->
+        <label>
+          First name
+          <input name="first_name" placeholder="First name" autocomplete="given-name" />
+        </label>
+        <select name="favorite-cuisine" aria-label="Select your favorite cuisine..." required>
+          <option selected disabled value="">Select your favorite cuisine...</option>
+          <option>Italian</option>
+          <option>Japanese</option>
+          <option>Indian</option>
+          <option>Thai</option>
+          <option>French</option>
+        </select>
+
+        <!-- Input outside label -->
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email" autocomplete="email" />
+        <textarea name="valid" aria-invalid="false" aria-describedby="valid-helper">
+  Valid
+</textarea
+        >
+        <small id="valid-helper">Looks good!</small>
+
+        <textarea name="invalid" aria-invalid="true" aria-describedby="invalid-helper">
+  Invalid
+</textarea
+        >
+        <small id="invalid-helper"> Please provide a valid value! </small>
+      </form>
     </main>
   </body>
 </html>
