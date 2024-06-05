@@ -1,9 +1,13 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/jquery': ^3.5.30
+  '@types/mousetrap': ^1.6.15
   '@types/node': ^20.8.7
   concurrently: ^8.2.2
   html-webpack-plugin: ^5.5.3
+  jquery: ^3.7.1
+  mousetrap: ^1.6.5
   nodemon: ^3.0.1
   reflect-metadata: ^0.1.13
   ts-loader: ^9.5.0
@@ -13,7 +17,13 @@ specifiers:
   webpack-dev-server: ^4.15.1
   webpack-node-externals: ^3.0.0
 
+dependencies:
+  '@types/mousetrap': 1.6.15
+  jquery: 3.7.1
+  mousetrap: 1.6.5
+
 devDependencies:
+  '@types/jquery': 3.5.30
   '@types/node': 20.8.7
   concurrently: 8.2.2
   html-webpack-plugin: 5.5.3_webpack@5.89.0
@@ -157,6 +167,12 @@ packages:
       '@types/node': 20.8.7
     dev: true
 
+  /@types/jquery/3.5.30:
+    resolution: {integrity: sha512-nbWKkkyb919DOUxjmRVk8vwtDb0/k8FKncmUKFi+NY+QXqWltooxTrswvz4LspQwxvLdvzBN1TImr6cw3aQx2A==}
+    dependencies:
+      '@types/sizzle': 2.3.8
+    dev: true
+
   /@types/json-schema/7.0.14:
     resolution: {integrity: sha512-U3PUjAudAdJBeC2pgN8uTIKgxrb4nlDF3SF0++EldXQvQBGkpFZMSnwQiIoDU77tv45VgNkl/L4ouD+rEomujw==}
     dev: true
@@ -168,6 +184,10 @@ packages:
   /@types/mime/3.0.3:
     resolution: {integrity: sha512-i8MBln35l856k5iOhKk2XJ4SeAWg75mLIpZB4v6imOagKL6twsukBZGDMNhdOVk7yRFTMPpfILocMos59Q1otQ==}
     dev: true
+
+  /@types/mousetrap/1.6.15:
+    resolution: {integrity: sha512-qL0hyIMNPow317QWW/63RvL1x5MVMV+Ru3NaY9f/CuEpCqrmb7WeuK2071ZY5hczOnm38qExWM2i2WtkXLSqFw==}
+    dev: false
 
   /@types/node/20.8.7:
     resolution: {integrity: sha512-21TKHHh3eUHIi2MloeptJWALuCu5H7HQTdTrWIFReA8ad+aggoX+lRes3ex7/FtpC+sVUpFMQ+QTfYr74mruiQ==}
@@ -206,6 +226,10 @@ packages:
       '@types/http-errors': 2.0.3
       '@types/mime': 3.0.3
       '@types/node': 20.8.7
+    dev: true
+
+  /@types/sizzle/2.3.8:
+    resolution: {integrity: sha512-0vWLNK2D5MT9dg0iOo8GlKguPAU02QjmZitPEsXRuJXU/OGIOt9vT9Fc26wtYuavLxtO45v9PGleoL9Z0k1LHg==}
     dev: true
 
   /@types/sockjs/0.3.35:
@@ -1450,6 +1474,10 @@ packages:
       supports-color: 8.1.1
     dev: true
 
+  /jquery/3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
+    dev: false
+
   /json-parse-even-better-errors/2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
     dev: true
@@ -1568,6 +1596,10 @@ packages:
     dependencies:
       brace-expansion: 1.1.11
     dev: true
+
+  /mousetrap/1.6.5:
+    resolution: {integrity: sha512-QNo4kEepaIBwiT8CDhP98umTetp+JNfQYBWvC1pc6/OAibuXtRcxZ58Qz8skvEHYvURne/7R8T5VoOI7rDsEUA==}
+    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
