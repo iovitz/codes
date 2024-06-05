@@ -6,13 +6,12 @@
 // @author       iovitz
 // @connect      localhost
 // @connect      cdn.jsdelivr.net
-// @connect      aliyuncs.com
 // @match        *://*/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
-// @resource     picoCSS https://common-1005.oss-cn-beijing.aliyuncs.com/cdn/pico.conditional.css
+// @resource     picoCSS https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.1/dist/pico.conditional.css
 // ==/UserScript==
 
 GM_addStyle(GM_getResourceText('picoCSS'))
@@ -22,11 +21,7 @@ loadRequireFiles().then(() => {
 })
 
 function loadRequireFiles() {
-  var resourcesList = [
-    'https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js', // jquery
-    'https://cdn.jsdelivr.net/npm/mousetrap@1.6.5/mousetrap.min.js', // mousetrap
-    'http://localhost:3131/main.js',
-  ]
+  var resourcesList = ['https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.1/dist/tampermonkey.js', 'http://localhost:3131/main.js']
 
   let promise = null
   resourcesList.forEach(url => {
