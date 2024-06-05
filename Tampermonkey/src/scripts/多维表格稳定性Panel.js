@@ -1,4 +1,5 @@
 const { $, mousetrap } = window.__TAMPERMONKEY_UTILS__
+console.log(mousetrap)
 
 const HTML = `
 <div
@@ -31,7 +32,7 @@ display: none;
       <li><a href="#">Birio</a></li>
     </ul>
   </nav>
-  <input class="__SUPER_QUERY__" type="search" name="text" placeholder="超级检索" aria-label="Text" />
+  <input class="__SUPER_QUERY__ mousetrap" type="search" name="text" placeholder="超级检索" aria-label="Text" />
 </header>
 <div style="height: 300px"></div>
 <footer>Footer</footer>
@@ -56,19 +57,33 @@ class ScriptController {
   }
 
   initTogglePanelEvent() {
-    mousetrap.bind('option option', this.togglePanel)
+    mousetrap.bind('command command', this.togglePanel)
+    mousetrap.bind('esc esc', this.closePanel)
+    mousetrap.stopCallback = () => {
+      return false
+    }
   }
 
   togglePanel = () => {
     if (this.open) {
-      this.open = false
-      this.panel.css('display', 'none')
-      console.info('###关闭Panel')
+      this.closePanel()
     } else {
-      this.open = true
-      this.panel.css('display', 'flex')
-      console.info('###打开Panel')
+      this.openPanel()
     }
+  }
+  openPanel = () => {
+    if (this.open) return
+    this.open = true
+    this.panel.css('display', 'flex')
+    this.panel.find('input.__SUPER_QUERY__').focus()
+    this.panel.find('input.__SUPER_QUERY__').val('')
+    console.info('###打开Panel')
+  }
+  closePanel = () => {
+    if (!this.open) return
+    this.open = false
+    this.panel.css('display', 'none')
+    console.info('###关闭Panel')
   }
 
   insertHTML() {
