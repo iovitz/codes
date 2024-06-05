@@ -11,49 +11,14 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
-// @resource     picoCSS https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.1/dist/pico.conditional.css
+// @resource     picoCSS https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.3/dist/pico.conditional.css
+// @require      https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.3/dist/tampermonkey_loader.js
 // ==/UserScript==
 
 GM_addStyle(GM_getResourceText('picoCSS'))
 
-loadRequireFiles().then(() => {
-  // ...YourCode
-})
-
-function loadRequireFiles() {
-  var resourcesList = ['https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.1/dist/tampermonkey.js', 'http://localhost:3131/main.js']
-
-  let promise = null
-  resourcesList.forEach(url => {
-    const fileUrl = url + `?t=${Date.now()}`
-    console.log(url)
-    if (promise) {
-      promise.then(() => {
-        return getScript(fileUrl)
-      })
-    } else {
-      promise = getScript(fileUrl)
-    }
-  })
-
-  function getScript(fileUrl) {
-    return new Promise(resolve => {
-      GM.xmlHttpRequest({
-        method: 'GET',
-        url: fileUrl,
-        onload: function (response) {
-          let remoteScript = document.createElement('script')
-          remoteScript.innerHTML = response.responseText
-          document.body.appendChild(remoteScript)
-          console.log('###脚本加载成功', fileUrl)
-          return resolve()
-        },
-        onerror(e) {
-          console.error('###加载脚本失败', e)
-        },
-      })
-    })
+__TAMPERMONKEY_LAOD_SCRIPTS__(['https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.3/dist/tampermonkey_utils.js', 'http://localhost:3131/main.js']).then(
+  () => {
+    // YourCode
   }
-
-  return promise
-}
+)

@@ -2,7 +2,8 @@ const path = require('path')
 
 const webpackConfig = {
   entry: {
-    tampermonkey: './src/entry/tampermonkey.ts',
+    tampermonkey_loader: './src/tampermonkey/loader.tampermonkey.js',
+    tampermonkey_utils: './src/tampermonkey/utils.tampermonkey.ts',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

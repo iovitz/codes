@@ -16,6 +16,6 @@
     "experimentalDecorators": true,
     "baseUrl": "."
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts"],
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/tampermonkey/loader.tampermonkey.js"],
   "exclude": ["node_modules", "dist", "__tests__"]
 }
