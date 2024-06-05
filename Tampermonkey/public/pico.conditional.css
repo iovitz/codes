@@ -187,7 +187,7 @@
 /**
  * Color schemes
  */
-.pico [data-theme='light'],
+.pico[data-theme='light'],
 .pico:not([data-theme='dark']) {
   --pico-background-color: #fff;
   --pico-color: #373c44;

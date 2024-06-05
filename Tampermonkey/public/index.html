@@ -5,9 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="./pico.conditional.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mousetrap@1.6.5/mousetrap.min.js"></script>
     <title>Hello world!</title>
   </head>
   <body>
+    <div
+      style="
+        position: fixed;
+        z-index: 9999999999;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+      "
+    >
+      <div class="pico" style="width: 500px; overflow: hidden; font-size: 14px">
+        <article>
+          <header>
+            <nav>
+              <ul>
+                <li><strong>多维表格稳定性插件</strong></li>
+              </ul>
+              <ul>
+                <li><a href="#">Tea</a></li>
+                <li><a href="#">Slardar</a></li>
+                <li><a href="#">Birio</a></li>
+              </ul>
+            </nav>
+            <input class="__SUPER_QUERY__" type="search" name="text" placeholder="超级检索" aria-label="Text" />
+          </header>
+          <div style="height: 300px"></div>
+          <footer>Footer</footer>
+        </article>
+      </div>
+    </div>
     <main class="pico">
       <nav>
         <ul>
@@ -176,4 +211,10 @@
       </form>
     </main>
   </body>
+
+  <script>
+    Mousetrap.bind('g i', function () {
+      alert('###111')
+    })
+  </script>
 </html>
