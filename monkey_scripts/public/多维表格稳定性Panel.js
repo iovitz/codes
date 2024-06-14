@@ -1,8 +1,25 @@
-const { $, mousetrap } = window.__TAMPERMONKEY_UTILS__
-console.log(mousetrap)
+// ==UserScript==
+// @name         多维表格稳定性Panel
+// @namespace    https://github.com/iovitz
+// @version      0.0.0
+// @description  {{ date }}
+// @author       iovitz
+// @match        https://www.baidu.com/
+// @grant        GM_xmlhttpRequest
+// @grant        GM_addStyle
+// @grant        GM_getResourceText
+// @resource     picoCSS https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.3/dist/pico.conditional.css
+// @require      https://cdn.jsdelivr.net/npm/iovitz-cdn@1.0.4/dist/monkey_script.js
+// ==/UserScript==
 
-const HTML = `
-<div
+const unsafeWindow = window?.unsafeWindow
+const scopeWindow = unsafeWindow ? (unsafeWindow.window === unsafeWindow ? unsafeWindow : window) : window
+
+GM_addStyle(GM_getResourceText('picoCSS'))
+
+const { $, mousetrap } = scopeWindow.__MONKEY_SCRIPTS__
+
+const HTML = `<div
 id="__BASE_PANEL__"
 data-theme="dark"
 style="
@@ -16,10 +33,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 background-color: rgba(0, 0, 0, 0.5);
-display: none;
 "
 >
-<div class="pico" style="width: 500px; overflow: hidden; font-size: 14px">
+<div class="pico" style="width: 500px; font-size: 14px">
 <article>
 <header>
   <nav>
@@ -27,15 +43,35 @@ display: none;
       <li><strong>多维表格稳定性插件</strong></li>
     </ul>
     <ul>
-      <li><a href="#">Tea</a></li>
-      <li><a href="#">Slardar</a></li>
-      <li><a href="#">Birio</a></li>
+      <li>
+      <details class="dropdown">
+        <summary>
+          Account
+        </summary>
+        <ul dir="rtl">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </details>
+      </li>
     </ul>
   </nav>
   <input class="__SUPER_QUERY__ mousetrap" type="search" name="text" placeholder="超级检索" aria-label="Text" />
 </header>
 <div style="height: 300px"></div>
-<footer>Footer</footer>
+<footer>
+
+  <nav>
+    <ul>
+      <li><a href="#">Tea</a></li>
+      <li><a href="#">Slardar</a></li>
+      <li><a href="#">Birio</a></li>
+      <li><a href="#">Birio新</a></li>
+    </ul>
+  </nav>
+</footer>
 </article>
 </div>
 </div>
