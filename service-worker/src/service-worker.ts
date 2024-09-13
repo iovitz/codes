@@ -1,4 +1,4 @@
-// import 'typescript/lib/lib.webworker'
+// https://panzhongxian.cn/cn/2021/04/08-service-workers-their-lifecycle-and-use-cases/
 
 // 缓存名称
 const CACHE_NAME = 'my-site-cache-v1';
