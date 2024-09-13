@@ -1,0 +1,29 @@
+{
+  "name": "@iovitz.codes/template",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack serve",
+    "exec": "./node_modules/.bin/nodemon ./dist/main.js",
+    "build:watch": "./node_modules/.bin/webpack build --watch",
+    "build": "./node_modules/.bin/webpack build"
+  },
+  "author": "iovitz",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.5.3",
+    "nodemon": "^3.0.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.6.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-node-externals": "^3.0.0",
+    "workbox-webpack-plugin": "^7.1.0"
+  }
+}

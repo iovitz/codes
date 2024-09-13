@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "reflect-metadata"
+    ],
+    "strict": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "target": "es6",
+    "lib": [
+      "DOM",
+      "ES6"
+    ], // 确保包含 DOM
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "outDir": "./dist",
+    "baseUrl": "."
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "types/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "__tests__"
+  ]
+}
