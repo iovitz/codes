@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('node:path')
+const process = require('node:process')
 
 const isWeb = process.env.SCINE === 'web'
 const isNode = !isWeb
@@ -42,9 +43,10 @@ if (isWeb) {
       template: 'public/index.html',
       filename: 'index.html',
       inject: true,
-    })
+    }),
   )
-} else if (isNode) {
+}
+else if (isNode) {
   const nodeExternals = require('webpack-node-externals')
   webpackConfig.target = 'node'
   webpackConfig.externals.push(nodeExternals())

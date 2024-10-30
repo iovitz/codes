@@ -2,20 +2,24 @@
   "name": "@iovitz.codes/template",
   "version": "1.0.0",
   "description": "...",
+  "author": "iovitz",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "web": "cross-env SCINE=web ./node_modules/.bin/webpack serve",
     "dev": "npm run build && ./node_modules/.bin/concurrently \"npm run exec\" \"npm run build:watch\"",
     "exec": "./node_modules/.bin/nodemon ./dist/main.js",
     "build:watch": "./node_modules/.bin/webpack build --watch",
-    "build": "./node_modules/.bin/webpack build"
+    "build": "./node_modules/.bin/webpack build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
-  "author": "iovitz",
-  "license": "ISC",
   "devDependencies": {
+    "@antfu/eslint-config": "^3.8.0",
     "@types/node": "^22.8.4",
     "concurrently": "^9.0.1",
     "cross-env": "^7.0.3",
+    "eslint": "^9.13.0",
     "html-webpack-plugin": "^5.6.3",
     "nodemon": "^3.1.7",
     "reflect-metadata": "^0.2.2",
